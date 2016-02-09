@@ -63,7 +63,13 @@
                 float: left;
                 width: 100%;
                 text-align: left;
-                margin-bottom: 10px;
+                margin-top: 10px;
+            }
+
+            span {
+                text-align: right;
+                color: #d63545;
+                margin-bottom: 20px;
             }
 
             input {
@@ -71,12 +77,22 @@
             }
 
             input[type='submit'] {
-                width: 50%;
+                width: 100px;
+                height: 100px;
                 background-color: #000;
                 border: none;
                 color: #fff;
-                margin: 20px 27%;
+                margin: 20px auto;
+                float: right;
                 text-align: center;
+                border-radius: 100%;
+                font-size: 20px;
+                font-weight: 100;
+                font-family: 'Raleway';
+            }
+
+            input[type='submit']:hover {
+                background-color: #35b2d6;
             }
         </style>
     </head>
@@ -85,8 +101,14 @@
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/contact">Contact</a></li>
+
+                @if(\Auth::check())
+                <li><a href="/logout">Log out</a></li>
+                @else
                 <li><a href="/register">Register</a></li>
                 <li><a href="/login">Log in</a></li>
+                @endif
+
             </ul>    
         </nav>
 
