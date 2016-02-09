@@ -12,18 +12,21 @@
             }
 
             body {
+                font-weight: 100;
+                font-family: 'Raleway';
+            }
+
+            .home {
                 margin: 0;
                 padding: 0;
                 width: 100%;
                 display: table;
-                font-weight: 100;
-                font-family: 'Raleway';
             }
 
             .container {
                 text-align: center;
                 display: table-cell;
-                /*vertical-align: middle;*/
+                vertical-align: middle;
             }
 
             .content {
@@ -32,11 +35,25 @@
             }
 
             .title {
-                font-size: 96px;
+                font-size: 72px;
+            }
+
+            ul li {
+                display: inline;
             }
         </style>
     </head>
     <body>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/login">Log in</a></li>
+            </ul>    
+        </nav>
+
         @yield('content')
+
     </body>
 </html>
