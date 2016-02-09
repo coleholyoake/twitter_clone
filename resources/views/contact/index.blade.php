@@ -1,14 +1,14 @@
 @extends('master')
 
-@section('title', 'Home')
-@section('meta-description', 'Like Twitter')
+@section('title', 'Contact')
+@section('meta-description', 'Contact us')
 
 @section('content')
 	
 	<div class="index">
 	    <div class="container">
 	        <div class="content">
-	            <div class="title">twe two</div>
+	            <div class="title">Contact</div>
 	        </div>
 	    </div>
 	</div>

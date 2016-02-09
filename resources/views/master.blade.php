@@ -16,7 +16,7 @@
                 font-family: 'Raleway';
             }
 
-            .home {
+            .index {
                 margin: 0;
                 padding: 0;
                 width: 100%;
@@ -40,6 +40,11 @@
 
             ul li {
                 display: inline;
+                padding: 20px;
+            }
+
+            a {
+                text-decoration: none;
             }
         </style>
     </head>
