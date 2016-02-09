@@ -8,7 +8,7 @@
 	<div class="index">
 	    <div class="container">
 	        <div class="content">
-	            <div class="title">twe two</div>
+	            <div class="title">tweet.2</div>
 	        </div>
 	    </div>
 	</div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>@yield('title') - Twe Two</title>
+        <title>@yield('title') - tweet.2</title>
         <meta charset="utf-8">
         <meta name="description" content="@yield('meta-description')">
         <link href="https://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css">
@@ -38,6 +38,13 @@
                 font-size: 72px;
             }
 
+            .secondaryTitle {
+                font-size: 25px;
+                color: #fff;
+                background-color: #35b2d6;
+                padding: 5px;
+            }
+
             ul li {
                 display: inline;
                 padding: 20px;
@@ -45,6 +52,31 @@
 
             a {
                 text-decoration: none;
+            }
+
+            form {
+                width: 20%;
+                margin: 50px auto;
+            }
+
+            input, label {
+                float: left;
+                width: 100%;
+                text-align: left;
+                margin-bottom: 10px;
+            }
+
+            input {
+                height: 20px;
+            }
+
+            input[type='submit'] {
+                width: 50%;
+                background-color: #000;
+                border: none;
+                color: #fff;
+                margin: 20px 27%;
+                text-align: center;
             }
         </style>
     </head>
