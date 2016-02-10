@@ -68,7 +68,7 @@
                 margin: 50px auto;
             }
 
-            input, label {
+            input, label, textarea {
                 float: left;
                 width: 100%;
                 text-align: left;
