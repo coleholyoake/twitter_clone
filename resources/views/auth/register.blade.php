@@ -24,6 +24,13 @@
 		    		@endif
 	        	</div>
 	        	<div>
+	        		<label for="username">Username:</label>
+	        		<input type="text" name="username" id="username" value="{{ old('username') }}">
+	        		@if($errors->first('username'))
+		    			<span><small>*{{ $errors->first('username') }}</small></span>
+		    		@endif
+	        	</div>
+	        	<div>
 	        		<label for="email">Email:</label>
 	        		<input type="email" name="email" id="email" value="{{ old('email') }}">
 	        		@if($errors->first('email'))
