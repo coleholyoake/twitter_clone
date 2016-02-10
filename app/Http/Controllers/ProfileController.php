@@ -8,7 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Tweet;
 
-class AccountController extends Controller
+class ProfileController extends Controller
 {
     public function index() {
 
@@ -17,7 +17,7 @@ class AccountController extends Controller
 
     	// return view('account/new-tweet');
 
-    	return view('account.index');
+    	return view('profile.index', compact('totalTweets'));
     }
 
     public function newTweet(Request $request) {
@@ -33,6 +33,6 @@ class AccountController extends Controller
 
     	$newTweet->save();
 
-    	return redirect('account');
+    	return redirect('profile');
     }
 }

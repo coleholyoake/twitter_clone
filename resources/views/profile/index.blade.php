@@ -11,11 +11,11 @@
 	            <div class="title">tweet.2</div>
 	            <div class="secondaryTitle">HELLO, {{ \Auth::user()->name }}</div>
 	            <br>
-	           	<ul>
-	           		{{-- <li>Total Tweets = {{ $totalTweets }}</li> --}}
-	           	</ul>
+	           	
+	           		<h4>Tweets = {{ $totalTweets }}</h4>
+	           	
 	        </div>
-	        <form action="account/new-tweet" method="post">
+	        <form action="/profile/new-tweet" method="post">
 
 	            {!! csrf_field() !!}
 
