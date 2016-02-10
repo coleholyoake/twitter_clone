@@ -1,7 +1,7 @@
 @extends('master')
 
-@section('title', 'Contact')
-@section('meta-description', 'Welcome to your account')
+@section('title', 'Profile')
+@section('meta-description', 'Welcome to your profile')
 
 @section('content')
 	
@@ -12,7 +12,7 @@
 	            <div class="secondaryTitle">HELLO, {{ \Auth::user()->name }}</div>
 	            <br>
 	           	
-	           		<h4>Tweets = {{ $totalTweets }}</h4>
+	           		<h3>Tweets = {{ $totalTweets }}</h3>
 	           	
 	        </div>
 	        <form action="/profile/new-tweet" method="post">

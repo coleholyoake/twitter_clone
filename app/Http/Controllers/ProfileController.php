@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Tweet;
+use App\User;
 
 class ProfileController extends Controller
 {
@@ -23,7 +24,7 @@ class ProfileController extends Controller
     public function newTweet(Request $request) {
 
     	$this->validate($request, [
-    			'content'=>'required|max:140'
+    			'content'=>'required|min:3|max:140'
     		]);
 
     	$newTweet = new Tweet();
@@ -34,5 +35,15 @@ class ProfileController extends Controller
     	$newTweet->save();
 
     	return redirect('profile');
+    }
+
+    public function show($username) {
+
+    	//find the user
+    	$user = User::where('username', '=', $username)->firstOrFail();
+
+    	$userTweets = $user->tweets()->get();
+
+    	return view('profile.show', compact('user', 'userTweets'));
     }
 }

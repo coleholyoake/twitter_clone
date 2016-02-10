@@ -33,8 +33,11 @@
 
             .content {
                 text-align: center;
-                display: inline-block;
-                width: 20%;
+                display: block;
+                width: 100%;
+                padding: 0 30% 60px 30%;
+                box-sizing: border-box;
+                clear: both;
             }
 
             .title {
@@ -64,7 +67,7 @@
             }
 
             form {
-                width: 20%;
+                width: 40%;
                 margin: 50px auto;
             }
 
@@ -99,10 +102,31 @@
                 font-size: 16px;
                 font-weight: 100;
                 font-family: 'Raleway';
+                clear: both;
             }
 
             input[type='submit']:hover {
                 background-color: #35b2d6;
+            }
+
+            img {
+                float: left;
+                margin-right:20px;
+            }
+
+            .description {
+                text-align: justify;
+                margin-top: 0px;
+            }
+
+            small {
+                font-weight: 100;
+                color: #35b2d6;
+            }
+
+            .tweet {
+                text-align: left;
+                font-weight: 500;
             }
         </style>
     </head>
