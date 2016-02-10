@@ -5,6 +5,8 @@
         <meta charset="utf-8">
         <meta name="description" content="@yield('meta-description')">
         <link href="https://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet" type="text/css">
 
         <style>
             html, body {
@@ -32,9 +34,11 @@
             .content {
                 text-align: center;
                 display: inline-block;
+                width: 20%;
             }
 
             .title {
+                margin-top: 50px;
                 font-size: 72px;
             }
 
@@ -48,10 +52,15 @@
             ul li {
                 display: inline;
                 padding: 20px;
+                font-weight: 300;
             }
 
             a {
                 text-decoration: none;
+            }
+
+            a:hover {
+                border-bottom: 1px solid;
             }
 
             form {
@@ -69,7 +78,8 @@
             span {
                 text-align: right;
                 color: #d63545;
-                margin-bottom: 20px;
+                float: right;
+                font-weight: 300;
             }
 
             input {
@@ -77,8 +87,8 @@
             }
 
             input[type='submit'] {
-                width: 100px;
-                height: 100px;
+                width: 75px;
+                height: 75px;
                 background-color: #000;
                 border: none;
                 color: #fff;
@@ -86,7 +96,7 @@
                 float: right;
                 text-align: center;
                 border-radius: 100%;
-                font-size: 20px;
+                font-size: 16px;
                 font-weight: 100;
                 font-family: 'Raleway';
             }
@@ -103,10 +113,10 @@
                 <li><a href="/contact">Contact</a></li>
 
                 @if(\Auth::check())
-                <li><a href="/logout">Log out</a></li>
+                <li><a href="/logout">Logout</a></li>
                 @else
                 <li><a href="/register">Register</a></li>
-                <li><a href="/login">Log in</a></li>
+                <li><a href="/login">Login</a></li>
                 @endif
 
             </ul>    
