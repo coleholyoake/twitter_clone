@@ -23,8 +23,38 @@
 
 	            @foreach( $userTweets as $tweet)
 	            <article class="tweet">
-	            	<p>{{ $tweet->content }}</p>
-	            	<small>Posted <strong>{{ $tweet->created_at }}</strong> by <strong>{{ $tweet->user->name }}</strong></small>
+	            	<br>
+	            	<h2>{{ $tweet->content }}</h2>
+	            	<small>Posted <strong>{{ $tweet->created_at }}</strong> by <strong>&commat;{{ $tweet->user->username }}</strong></small>
+	            	<br><br>
+
+	            	<h3><i>Comments</i></h3>
+
+	            	@if(\Auth::check())
+	            	<form class="commentform" action="/profile/new-comment" method="post">
+
+		            {!! csrf_field() !!}
+
+		            	<div>
+		            		<input type="hidden" name="tweet-id" value="{{ $tweet->id }}">
+		            		<label for="comment">Write a comment here</label>
+		            		<textarea name="comment" id="comment" rows="5">{{ old('comment') }}</textarea>
+		            		@if($errors->first('comment'))
+			    			<span><small>*{{ $errors->first('comment') }}</small></span>
+			    			@endif
+		            	</div>
+		            	<input type="submit" value="Comment">
+		            </form>
+		            @endif
+
+	            	@forelse( $tweet->comments as $comment)
+	            		<article class="comment">
+	            			<p>- {{ $comment->content }}</p>
+	            			<small>Posted <strong>{{ $comment->created_at }}</strong> by <strong>&commat;{{ $comment->user->username }}</strong></small>
+	            			@empty
+	            			<p>Be the first to comment!</p>
+	            		</article>
+	            	@endforelse
 	            	<hr>
 	            </article>
 	            @endforeach

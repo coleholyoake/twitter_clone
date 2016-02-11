@@ -35,7 +35,7 @@
                 text-align: center;
                 display: block;
                 width: 100%;
-                padding: 0 30% 60px 30%;
+                padding: 0 35% 60px 35%;
                 box-sizing: border-box;
                 clear: both;
             }
@@ -67,8 +67,16 @@
             }
 
             form {
-                width: 40%;
+                width: 30%;
                 margin: 50px auto;
+                clear: both;
+            }
+
+            .commentform {
+                width: 100%;
+                padding-bottom: 100px;
+                margin-top: 0px;
+                box-sizing: border-box;
             }
 
             input, label, textarea {
@@ -78,12 +86,7 @@
                 margin-top: 10px;
             }
 
-            span {
-                text-align: right;
-                color: #d63545;
-                float: right;
-                font-weight: 300;
-            }
+            
 
             input {
                 height: 20px;
@@ -99,7 +102,7 @@
                 float: right;
                 text-align: center;
                 border-radius: 100%;
-                font-size: 16px;
+                font-size: 14px;
                 font-weight: 100;
                 font-family: 'Raleway';
                 clear: both;
@@ -124,9 +127,29 @@
                 color: #35b2d6;
             }
 
+            span, span small {
+                text-align: right;
+                color: #d63545 !important;
+                float: right;
+                font-weight: 300;
+            }
+
             .tweet {
                 text-align: left;
-                font-weight: 500;
+                font-weight: 300;
+            }
+
+            .comment {
+               
+
+            }
+
+            h2, h3, p {
+                margin-bottom: 0px;
+            }
+
+            hr {
+                margin: 60px auto;
             }
         </style>
     </head>

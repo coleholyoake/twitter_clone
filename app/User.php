@@ -12,6 +12,11 @@ class User extends Authenticatable
         return $this->hasMany('App\Tweet');
     }
 
+    public function comments() {
+
+        return $this->hasMany('App\Comment');
+    }
+
 
 
     /**

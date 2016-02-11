@@ -15,7 +15,7 @@
 	           		<h3>Tweets = {{ $totalTweets }}</h3>
 	           	
 	        </div>
-	        <form action="/profile/new-tweet" method="post">
+	        	<form action="/profile/new-tweet" method="post">
 
 	            {!! csrf_field() !!}
 
@@ -24,7 +24,7 @@
 	            		<textarea name="content" id="content" rows="5">{{ old('content') }}</textarea>
 	            		@if($errors->first('content'))
 		    			<span><small>*{{ $errors->first('content') }}</small></span>
-		    		@endif
+		    			@endif
 	            	</div>
 	            	<input type="submit" value="Tweet">
 	            </form>
