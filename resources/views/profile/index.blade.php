@@ -11,9 +11,9 @@
 	            <div class="title">tweet.2</div>
 	            <div class="secondaryTitle">HELLO, {{ \Auth::user()->name }}</div>
 	            <br>
-	           	
+	           	<hr>
 	           		<h3>Tweets = {{ $totalTweets }}</h3>
-	           	
+	           	<hr>
 	        </div>
 	        	<form action="/profile/new-tweet" method="post">
 

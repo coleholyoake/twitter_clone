@@ -35,7 +35,7 @@
                 text-align: center;
                 display: block;
                 width: 100%;
-                padding: 0 35% 60px 35%;
+                padding: 0 35% 40px 35%;
                 box-sizing: border-box;
                 clear: both;
             }
@@ -127,11 +127,15 @@
                 color: #35b2d6;
             }
 
-            span, span small {
+            span, span small, .delete {
                 text-align: right;
                 color: #d63545 !important;
                 float: right;
                 font-weight: 300;
+            }
+
+            .deleteconfirm {
+                color: #d63545;
             }
 
             .tweet {
@@ -151,6 +155,7 @@
             hr {
                 margin: 60px auto;
             }
+
         </style>
     </head>
     <body>

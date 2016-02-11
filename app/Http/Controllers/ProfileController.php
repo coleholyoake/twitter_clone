@@ -65,6 +65,33 @@ class ProfileController extends Controller
 
     	return back();
     }
+
+    public function deleteTweet($id) {
+
+    	$tweet = Tweet::findOrFail($id);
+
+    	//check if the logged in user owns this tweet
+    	if( $tweet->user_id != \Auth::user()->id ) {
+    		return 'not yours';
+    	}
+
+    	return view('profile.confirm_tweet_delete', compact('tweet'));
+    }
+
+    public function destroyTweet($id) {
+
+    	$tweet = Tweet::findOrFail($id);
+
+    	//check if the logged in user owns this tweet
+    	if( $tweet->user_id != \Auth::user()->id ) {
+    		return 'not yours';
+    	}
+
+    	$tweet->delete();
+
+    	return redirect('profile/'.$tweet->user->username());
+
+    }
 }
 
 

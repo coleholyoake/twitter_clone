@@ -19,13 +19,19 @@
 	        </div>
 	            
 	        <div class="content">
+	        <hr>
 	        <h3>Tweets = {{ $user->tweets->count() }}</h3>
+	        <hr>
 
 	            @foreach( $userTweets as $tweet)
 	            <article class="tweet">
 	            	<br>
+	            	@if( \Auth::check() && $tweet->user->id == \Auth::user()->id )
+	            	<a class="delete" href="/profile/delete-tweet/{{ $tweet->id }}">x</a>
+	            	@endif 
 	            	<h2>{{ $tweet->content }}</h2>
-	            	<small>Posted <strong>{{ $tweet->created_at }}</strong> by <strong>&commat;{{ $tweet->user->username }}</strong></small>
+					<small>Posted <strong>{{ $tweet->created_at }}</strong> by <strong>&commat;{{ $tweet->user->username }}</strong></small>
+	            	
 	            	<br><br>
 
 	            	<h3><i>Comments</i></h3>
